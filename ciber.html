@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript basic</title>
+
+        <script>
+            console.log('Hola mundo!');
+                alert('Me llamo Oihane');
+            var name = "Oihane";
+            var surname = "Chourraut";
+                console.log('Me llamo ' + name + ' ' + surname);
+            var numberOne = 5;
+            var numberTwo = 3;
+                console.log('La suma de 5 + 3 = ' + (numberOne + numberTwo));
+            var nota_examen = prompt('¿Qué nota has sacado en el examen?');
+                if (nota_examen >=5 && nota_examen <=10){
+                    alert('¡Genial! Has aprobado el examen con un ' + nota_examen);
+                } else if (nota_examen < 5 && nota_examen >=0) {
+                    alert('Ohhhh… Has suspendido el examen con un ' + nota_examen);
+                } else {
+                    alert('La nota que has introducido no es correcta');
+                }
+
+            var phrase = 'Tinc un cotxe de color verd';
+                if (phrase.indexOf('verd') != -1){
+                    phrase = phrase.replace('verd', 'blau');
+                    console.log(phrase);
+                }
+
+            var letterChange = phrase.replace(/o/g, 'u');
+                console.log(letterChange);
+
+            var objects = ['taula', 'cadira', 'ordinador', 'libreta'];
+                for (var i=0; i<objects.length;  i++){
+                    console.log("L'objecte "  + objects[i] + ' està a la posició ' + i + '.');
+                }
+
+            function calculadora(operador, valor1, valor2){
+                let suma = operador;
+                let resta = operador;
+                let multiplicacion = operador;
+
+                if (operador == 'suma') {
+                    return valor1 + valor2;
+                } else if (operador == 'resta') {
+                    return valor1 - valor2;
+                } else if (operador == 'multiplicacion') {
+                    return valor1 * valor2;
+                }
+            }
+
+            var result = calculadora('suma', 10, 5);
+            document.write('<p> 10 + 5 = ' + result);
+
+            var result = calculadora('resta', 10, 5);
+            document.write('<p> 10 - 5 = ' + result);
+
+            var result = calculadora('multiplicacion', 10, 5);
+            document.write('<p> 10 * 5 = ' + result);
+
+        </script>
+    </head>
+    <body style="background-color: #2F5373; color: #fff; display: flex; flex-direction: column; align-items: center; ">
+
+    </body>
+</html>
